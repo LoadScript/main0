@@ -1,0 +1,372 @@
+-- Instances:
+
+local AutoChestFISCH = Instance.new("ScreenGui")
+local MainAutoChestFISCH = Instance.new("Frame")
+local ChestMain = Instance.new("Frame")
+local tpchest = Instance.new("TextButton")
+local status = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local notes = Instance.new("TextLabel")
+local tpmapfix = Instance.new("TextButton")
+local status_2 = Instance.new("TextLabel")
+local DestroyUI = Instance.new("TextButton")
+local TItle = Instance.new("TextLabel")
+local Toggler = Instance.new("TextButton")
+
+--Properties:
+
+AutoChestFISCH.Name = "AutoChestFISCH"
+AutoChestFISCH.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AutoChestFISCH.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainAutoChestFISCH.Name = "MainAutoChestFISCH"
+MainAutoChestFISCH.Parent = AutoChestFISCH
+MainAutoChestFISCH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainAutoChestFISCH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainAutoChestFISCH.BorderSizePixel = 0
+MainAutoChestFISCH.Position = UDim2.new(0.070847854, 0, 0.278571427, 0)
+MainAutoChestFISCH.Size = UDim2.new(0, 269, 0, 16)
+
+ChestMain.Name = "ChestMain"
+ChestMain.Parent = MainAutoChestFISCH
+ChestMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ChestMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ChestMain.BorderSizePixel = 0
+ChestMain.Position = UDim2.new(0.00219387468, 0, 1.03524208, 0)
+ChestMain.Size = UDim2.new(0, 269, 0, 124)
+
+tpchest.Name = "tpchest"
+tpchest.Parent = ChestMain
+tpchest.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tpchest.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tpchest.BorderSizePixel = 0
+tpchest.Position = UDim2.new(0.0352470092, 0, 0.268850744, 0)
+tpchest.Size = UDim2.new(0, 112, 0, 39)
+tpchest.Font = Enum.Font.Unknown
+tpchest.Text = "Teleport to Treasure Chest"
+tpchest.TextColor3 = Color3.fromRGB(0, 0, 0)
+tpchest.TextScaled = true
+tpchest.TextSize = 14.000
+tpchest.TextWrapped = true
+
+status.Name = "status"
+status.Parent = ChestMain
+status.BackgroundColor3 = Color3.fromRGB(255, 38, 0)
+status.BorderColor3 = Color3.fromRGB(0, 0, 0)
+status.BorderSizePixel = 0
+status.Position = UDim2.new(0.316211343, 0, 0.722535431, 0)
+status.Size = UDim2.new(0, 96, 0, 19)
+status.Font = Enum.Font.ArialBold
+status.Text = "Status: Not spawned"
+status.TextColor3 = Color3.fromRGB(0, 0, 0)
+status.TextScaled = true
+status.TextSize = 14.000
+status.TextWrapped = true
+status.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = status
+
+notes.Name = "notes"
+notes.Parent = ChestMain
+notes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+notes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+notes.BorderSizePixel = 0
+notes.Position = UDim2.new(0.0336834639, 0, 0.0613272898, 0)
+notes.Size = UDim2.new(0, 248, 0, 14)
+notes.Font = Enum.Font.ArialBold
+notes.Text = "IMPORTANT: You have to fix the treasure map or else the chest wont spawn!"
+notes.TextColor3 = Color3.fromRGB(0, 0, 0)
+notes.TextScaled = true
+notes.TextSize = 14.000
+notes.TextWrapped = true
+notes.TextXAlignment = Enum.TextXAlignment.Left
+
+tpmapfix.Name = "tpmapfix"
+tpmapfix.Parent = ChestMain
+tpmapfix.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tpmapfix.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tpmapfix.BorderSizePixel = 0
+tpmapfix.Position = UDim2.new(0.529670775, 0, 0.268850744, 0)
+tpmapfix.Size = UDim2.new(0, 112, 0, 39)
+tpmapfix.Font = Enum.Font.Unknown
+tpmapfix.Text = "Teleport to Map Fix NPC"
+tpmapfix.TextColor3 = Color3.fromRGB(0, 0, 0)
+tpmapfix.TextScaled = true
+tpmapfix.TextSize = 14.000
+tpmapfix.TextWrapped = true
+
+status_2.Name = "status"
+status_2.Parent = MainAutoChestFISCH
+status_2.BackgroundColor3 = Color3.fromRGB(255, 38, 0)
+status_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+status_2.BorderSizePixel = 0
+status_2.Position = UDim2.new(0.474999994, 0, 0, 0)
+status_2.Size = UDim2.new(0, 97, 0, 16)
+status_2.Font = Enum.Font.ArialBold
+status_2.Text = "Status: Not spawned"
+status_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+status_2.TextScaled = true
+status_2.TextSize = 14.000
+status_2.TextWrapped = true
+status_2.TextXAlignment = Enum.TextXAlignment.Left
+
+DestroyUI.Name = "DestroyUI"
+DestroyUI.Parent = MainAutoChestFISCH
+DestroyUI.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
+DestroyUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DestroyUI.BorderSizePixel = 0
+DestroyUI.Position = UDim2.new(0.922999978, 0, 0, 0)
+DestroyUI.Size = UDim2.new(0, 22, 0, 16)
+DestroyUI.Font = Enum.Font.SourceSans
+DestroyUI.Text = "X"
+DestroyUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+DestroyUI.TextScaled = true
+DestroyUI.TextSize = 14.000
+DestroyUI.TextWrapped = true
+
+TItle.Name = "TItle"
+TItle.Parent = MainAutoChestFISCH
+TItle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TItle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TItle.BorderSizePixel = 0
+TItle.Position = UDim2.new(0.00100000005, 0, 0.234999999, 0)
+TItle.Size = UDim2.new(0, 121, 0, 10)
+TItle.Font = Enum.Font.SourceSans
+TItle.Text = "FISCH Auto Treasure 1.0"
+TItle.TextColor3 = Color3.fromRGB(0, 0, 0)
+TItle.TextSize = 14.000
+
+Toggler.Name = "Toggler"
+Toggler.Parent = MainAutoChestFISCH
+Toggler.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
+Toggler.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggler.BorderSizePixel = 0
+Toggler.Position = UDim2.new(0.837498069, 0, 0, 0)
+Toggler.Size = UDim2.new(0, 22, 0, 16)
+Toggler.Font = Enum.Font.SourceSans
+Toggler.Text = "-"
+Toggler.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toggler.TextScaled = true
+Toggler.TextSize = 14.000
+Toggler.TextWrapped = true
+
+-- Scripts:
+
+local function ERRFMK_fake_script() -- tpchest.LocalScript 
+	local script = Instance.new('LocalScript', tpchest)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		local world = workspace:FindFirstChild("world")
+		if world then
+			local chests = world:FindFirstChild("chests")
+			if chests then
+				local chestFound = false
+	
+				for _, child in ipairs(chests:GetChildren()) do
+					local targetCFrame = nil
+	
+					if child:IsA("BasePart") or child:IsA("MeshPart") then
+						targetCFrame = child.CFrame
+					elseif child:IsA("Model") then
+						local primaryPart = child:FindFirstChild("PrimaryPart") or child:FindFirstChildWhichIsA("BasePart")
+						if primaryPart then
+							targetCFrame = primaryPart.CFrame
+						end
+					end
+	
+					if targetCFrame then
+						local hrp = character:WaitForChild("HumanoidRootPart")
+						hrp.CFrame = targetCFrame
+						chestFound = true
+						return
+					end
+				end
+	
+				if not chestFound then
+					game:GetService("StarterGui"):SetCore("SendNotification", {
+						Title = "FISCH Auto Treasure 1.0",
+						Text = "Treasure Chest Not Detected! If you have a map, Fix it then try again!",
+						Icon = "",
+						Duration = 5
+					})
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(ERRFMK_fake_script)()
+local function MHWVQ_fake_script() -- status.LocalScript 
+	local script = Instance.new('LocalScript', status)
+
+	local textLabel = script.Parent
+	local chestsFolder = workspace:WaitForChild("world"):WaitForChild("chests")
+	
+	local function updateStatus()
+		if #chestsFolder:GetChildren() > 0 then
+			textLabel.Text = "Status: Spawned"
+			textLabel.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			textLabel.Text = "Status: Not Spawned"
+			textLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end
+	
+	updateStatus()
+	chestsFolder.ChildAdded:Connect(updateStatus)
+	chestsFolder.ChildRemoved:Connect(updateStatus)
+	
+end
+coroutine.wrap(MHWVQ_fake_script)()
+local function UHUUN_fake_script() -- tpmapfix.LocalScript 
+	local script = Instance.new('LocalScript', tpmapfix)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		local world = workspace:FindFirstChild("world")
+		if world then
+			local chests = world:FindFirstChild("chests")
+			if chests then
+				for _, child in ipairs(chests:GetChildren()) do
+					local targetCFrame = nil
+	
+					if child:IsA("BasePart") or child:IsA("MeshPart") then
+						targetCFrame = child.CFrame
+					elseif child:IsA("Model") then
+						local primaryPart = child:FindFirstChild("PrimaryPart") or child:FindFirstChildWhichIsA("BasePart")
+						if primaryPart then
+							targetCFrame = primaryPart.CFrame
+						end
+					end
+	
+					if targetCFrame then
+						local hrp = character:WaitForChild("HumanoidRootPart")
+						hrp.CFrame = targetCFrame
+						return
+					end
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(UHUUN_fake_script)()
+local function POTSLRW_fake_script() -- status_2.LocalScript 
+	local script = Instance.new('LocalScript', status_2)
+
+	local textLabel = script.Parent
+	local chestsFolder = workspace:WaitForChild("world"):WaitForChild("chests")
+	
+	local function updateStatus()
+		if #chestsFolder:GetChildren() > 0 then
+			textLabel.Text = "Status: Spawned"
+			textLabel.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			textLabel.Text = "Status: Not Spawned"
+			textLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end
+	
+	updateStatus()
+	chestsFolder.ChildAdded:Connect(updateStatus)
+	chestsFolder.ChildRemoved:Connect(updateStatus)
+	
+end
+coroutine.wrap(POTSLRW_fake_script)()
+local function XKEKCL_fake_script() -- MainAutoChestFISCH.LocalScript 
+	local script = Instance.new('LocalScript', MainAutoChestFISCH)
+
+	local frame = script.Parent
+	local userInput = game:GetService("UserInputService")
+	
+	local dragging = false
+	local dragStart, startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		frame.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	userInput.InputChanged:Connect(function(input)
+		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			update(input)
+		end
+	end)
+	
+end
+coroutine.wrap(XKEKCL_fake_script)()
+local function MTRFDW_fake_script() -- DestroyUI.Destroy 
+	local script = Instance.new('LocalScript', DestroyUI)
+
+	local button = script.Parent
+	local StarterGui = game:GetService("StarterGui")
+	local player = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		local bindable = Instance.new("BindableFunction")
+	
+		bindable.OnInvoke = function(response)
+			if response == "Unload" then
+				local autoChestUI = player:WaitForChild("PlayerGui"):FindFirstChild("AutoChestFISCH")
+				if autoChestUI then
+					autoChestUI:Destroy()
+				end
+			end
+		end
+	
+		StarterGui:SetCore("SendNotification", {
+			Title = "FISCH Auto Treasure 1.0",
+			Text = "Are you sure?",
+			Duration = 5,
+			Callback = bindable,
+			Button1 = "Unload",
+			Button2 = "Cancel"
+		})
+	end)
+	
+end
+coroutine.wrap(MTRFDW_fake_script)()
+local function TCYV_fake_script() -- Toggler.O/C 
+	local script = Instance.new('LocalScript', Toggler)
+
+	local button = script.Parent
+	local frame = script.Parent.Parent:FindFirstChild("ChestMain")
+	
+	if frame then
+		button.MouseButton1Click:Connect(function()
+			frame.Visible = not frame.Visible
+		end)
+	end
+	
+end
+coroutine.wrap(TCYV_fake_script)()
